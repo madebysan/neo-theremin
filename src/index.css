@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Share Tech Mono", "Courier New", monospace;
+  --font-sans: "Share Tech Mono", "Courier New", monospace;
+  --color-eva-orange: #ff6a00;
+  --color-eva-red: #cc0000;
+  --color-eva-amber: #ff9500;
+  --color-eva-green: #00ff88;
+  --color-eva-blue: #00aaff;
+  --color-eva-purple: #9933ff;
+  --color-eva-dark: #0a0a0f;
+  --color-eva-panel: rgba(255, 106, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a0f;
+}
+
+/* Scanline overlay */
+.scanlines {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  animation: crt-flicker 0.15s infinite;
+}
+
+/* CRT vignette — subtle edges */
+.vignette {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 49;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* CRT screen curvature + RGB fringing */
+.crt-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.crt-screen::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 51;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.02) 0px,
+      rgba(0, 255, 0, 0.02) 1px,
+      rgba(0, 0, 255, 0.02) 2px,
+      transparent 3px
+    );
+}
+
+/* Subtle CRT flicker */
+@keyframes crt-flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.98; }
+  15% { opacity: 0.96; }
+  20% { opacity: 0.99; }
+  50% { opacity: 0.96; }
+  80% { opacity: 0.98; }
+  90% { opacity: 0.95; }
+  100% { opacity: 0.97; }
+}
+
+/* Flicker animation for warnings */
+@keyframes eva-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.eva-blink {
+  animation: eva-blink 1s ease-in-out infinite;
+}
+
+@keyframes eva-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
