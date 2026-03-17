@@ -1,8 +1,13 @@
-# Neo Theremin
+<h1 align="center">Neo Theremin</h1>
+<p align="center">A browser-based gesture synthesis instrument.<br>
+Use your webcam to track hand movements and control sound in real time.</p>
+<p align="center"><a href="https://neo-theremin.vercel.app"><strong>Try it live →</strong></a></p>
 
-A browser-based gesture synthesis instrument that uses your webcam to track hand movements and control sound in real time. Built with MediaPipe hand/face tracking and the Web Audio API.
+---
 
-**[Live Demo](https://neo-theremin.vercel.app)**
+![Neo Theremin demo](public/hero.png)
+
+![Neo Theremin in action](public/theremin.gif)
 
 ## How It Works
 
@@ -72,6 +77,14 @@ Deployed on Vercel at [neo-theremin.vercel.app](https://neo-theremin.vercel.app)
 vercel --prod
 ```
 
+## Feedback
+
+Found a bug or have a feature idea? [Open an issue](https://github.com/madebysan/neo-theremin/issues).
+
 ## License
 
-MIT
+[MIT](LICENSE)
+
+---
+
+Made by [santiagoalonso.com](https://santiagoalonso.com)
