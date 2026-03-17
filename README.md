@@ -5,8 +5,6 @@ Use your webcam to track hand movements and control sound in real time.</p>
 
 ---
 
-![Neo Theremin demo](public/hero.png)
-
 <img src="public/theremin.gif" alt="Neo Theremin in action" width="100%">
 
 ## How It Works
