@@ -1,11 +1,18 @@
-<h1 align="center">Neo Theremin</h1>
-<p align="center">A browser-based gesture synthesis instrument.<br>
+<h1>Neo Theremin</h1>
+
+<p>A browser-based gesture synthesis instrument.<br>
 Use your webcam to track hand movements and control sound in real time.</p>
-<p align="center"><a href="https://neo-theremin.vercel.app"><strong>Try it live →</strong></a></p>
 
----
+<p>
+  <img src="https://img.shields.io/badge/React-61dafb" alt="React">
+  <img src="https://img.shields.io/badge/Vite-646cff" alt="Vite">
+  <img src="https://img.shields.io/badge/Tailwind-38bdf8" alt="Tailwind">
+  <img src="https://img.shields.io/badge/Vercel-000000" alt="Vercel">
+</p>
 
-<img src="public/theremin.gif" alt="Neo Theremin in action" width="100%">
+<p><a href="https://neo-theremin.vercel.app">Try it live</a></p>
+
+![Neo Theremin in action](public/theremin.gif)
 
 ## How It Works
 
