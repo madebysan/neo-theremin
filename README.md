@@ -1,7 +1,7 @@
 <h1>Neo Theremin</h1>
 
-<p>A browser-based gesture synthesis instrument.<br>
-Use your webcam to track hand movements and control sound in real time.</p>
+<p>Play a browser-based synthesizer with your hands.<br>
+Your webcam tracks each hand and turns movement into sound.</p>
 
 <p>
   <img src="https://img.shields.io/badge/React-61dafb" alt="React">
@@ -14,11 +14,9 @@ Use your webcam to track hand movements and control sound in real time.</p>
 
 ![Neo Theremin in action](public/theremin.gif)
 
-## How It Works
+## How it works
 
-Each hand is an independent voice. Move your hands in front of the camera to play.
-
-### Controls
+Each hand controls an independent synth voice. Move in front of the camera to play, change pitch and volume, switch scales, or add effects. Neo Theremin includes 21 synth packs, five musical scales, note snapping, reverb, and an in-app gesture guide.
 
 | Input | Effect |
 |-------|--------|
@@ -31,56 +29,23 @@ Each hand is an independent voice. Move your hands in front of the camera to pla
 | **Peace (index + middle)** | Filter sweep |
 | **Open mouth** | Siren effect |
 
-### Features
+The on-screen HUD shows tracked hands, gesture labels, pitch, and volume. Opening your mouth triggers a rising siren tone.
 
-- **Two independent voices** — each hand plays its own synth voice
-- **21 synth packs** — from Ethereal and Strings to Acid and Sci-Fi
-- **5 musical scales** — Major, Minor, Pentatonic, Blues, Chromatic
-- **Snap mode** — quantizes notes to the selected scale
-- **Reverb toggle** — adds convolution reverb
-- **Mouth detection** — triggers a rising siren tone
-- **EVA/NERV-inspired HUD** — scanlines, crosshairs, gesture labels, pitch/volume indicators
-- **Help modal** — in-app gesture reference
-
-## Tech Stack
+## Tech stack
 
 - **React** + **Vite**
 - **Tailwind CSS v4**
-- **MediaPipe Tasks Vision** — HandLandmarker (2 hands, 21 landmarks each) + FaceLandmarker (mouth detection)
-- **Web Audio API** — dual oscillators per voice, biquad filters, convolver reverb, wave shaper
+- **MediaPipe Tasks Vision:** HandLandmarker for two hands and FaceLandmarker for mouth detection
+- **Web Audio API:** dual oscillators, filters, convolution reverb, and wave shaping
 
-## Getting Started
+## Run locally
 
 ```bash
 npm install --legacy-peer-deps
 npm run dev
 ```
 
-Requires a webcam and a modern browser (Chrome/Edge recommended for best MediaPipe GPU performance).
-
-## Project Structure
-
-```
-src/
-  App.jsx                    # Main app, camera setup, audio loop
-  index.css                  # CRT effects, scanlines, vignette
-  hooks/
-    useHandTracking.js       # MediaPipe hand + face detection
-    useTheremin.js           # Web Audio synth engine, 21 packs
-  components/
-    HandCanvas.jsx           # Canvas overlay with EVA-style HUD
-    Controls.jsx             # Synth pack selector, scale, toggles
-    HelpModal.jsx            # Gesture reference modal
-    Onboarding.jsx           # Start screen + loading
-```
-
-## Deployment
-
-Deployed on Vercel at [neo-theremin.vercel.app](https://neo-theremin.vercel.app).
-
-```bash
-vercel --prod
-```
+Requires a webcam and a modern browser. Chrome or Edge currently gives MediaPipe the most reliable GPU path.
 
 ## Feedback
 
@@ -89,7 +54,5 @@ Found a bug or have a feature idea? [Open an issue](https://github.com/madebysan
 ## License
 
 [MIT](LICENSE)
-
----
 
 Made by [santiagoalonso.com](https://santiagoalonso.com)
