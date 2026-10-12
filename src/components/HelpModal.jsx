@@ -95,6 +95,14 @@ export default function HelpModal({ onClose }) {
           <p className="text-[9px] tracking-[0.15em] text-center" style={{ color: 'rgba(255,106,0,0.2)' }}>
             NERV AUDIO DIVISION — GESTURE SYNTHESIS INTERFACE
           </p>
+          <p className="text-[10px] text-center mt-2">
+            <a href="https://santiagoalonso.com" target="_blank" rel="noopener noreferrer"
+               style={{ color: 'rgba(255,106,0,0.35)' }}
+               onMouseEnter={(e) => e.target.style.color = '#ff6a00'}
+               onMouseLeave={(e) => e.target.style.color = 'rgba(255,106,0,0.35)'}>
+              Made by santiagoalonso.com
+            </a>
+          </p>
         </div>
       </div>
     </div>
