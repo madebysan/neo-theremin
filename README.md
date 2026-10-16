@@ -7,51 +7,27 @@ Your webcam tracks each hand and turns movement into sound.</p>
   <img src="https://img.shields.io/badge/React-61dafb" alt="React">
   <img src="https://img.shields.io/badge/Vite-646cff" alt="Vite">
   <img src="https://img.shields.io/badge/Tailwind-38bdf8" alt="Tailwind">
-  <img src="https://img.shields.io/badge/Vercel-000000" alt="Vercel">
 </p>
 
 <p><a href="https://neo-theremin.vercel.app">Try it live</a></p>
 
-![Neo Theremin in action](public/theremin.gif)
+![Neo Theremin tracking two hands over the webcam image](public/theremin.gif)
+
+Neo Theremin turns your webcam into an instrument you play in the air.
+
+- Each hand plays its own voice: the gap between thumb and index sets pitch, height sets volume.
+- Gestures add sustain, vibrato, filter sweeps and mute; opening your mouth sounds a siren.
+- 21 synth packs, five scales and note snapping.
 
 ## How it works
 
-Each hand controls an independent synth voice. Move in front of the camera to play, change pitch and volume, switch scales, or add effects. Neo Theremin includes 21 synth packs, five musical scales, note snapping, reverb, and an in-app gesture guide.
+Hand and face tracking run in the browser with [MediaPipe](https://ai.google.dev/edge/mediapipe), and the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) makes the sound. The video isn't uploaded; the tracking models download from Google's servers when the page loads. The full gesture list is in [docs/gestures.md](docs/gestures.md).
 
-| Input | Effect |
-|-------|--------|
-| **Thumb-Index distance** | Pitch (close = high, spread = low) |
-| **Hand height** | Volume (high = loud, low = quiet) |
-| **Open hand** | Play |
-| **Horns (index + pinky up)** | Sustain (holds volume, pitch still changes) |
-| **Fist** | Mute |
-| **Point (index only)** | Vibrato |
-| **Peace (index + middle)** | Filter sweep |
-| **Open mouth** | Siren effect |
+## Install
 
-The on-screen HUD shows tracked hands, gesture labels, pitch, and volume. Opening your mouth triggers a rising siren tone.
+Use it at [neo-theremin.vercel.app](https://neo-theremin.vercel.app), or run it locally with `npm install --legacy-peer-deps` and `npm run dev`. It needs a webcam; Chrome and Edge give the tracking the most reliable GPU path.
 
-## Tech stack
-
-- **React** + **Vite**
-- **Tailwind CSS v4**
-- **MediaPipe Tasks Vision:** HandLandmarker for two hands and FaceLandmarker for mouth detection
-- **Web Audio API:** dual oscillators, filters, convolution reverb, and wave shaping
-
-## Run locally
-
-```bash
-npm install --legacy-peer-deps
-npm run dev
-```
-
-Requires a webcam and a modern browser. Chrome or Edge currently gives MediaPipe the most reliable GPU path.
-
-## Feedback
-
-Found a bug or have a feature idea? [Open an issue](https://github.com/madebysan/neo-theremin/issues).
-
-## License
+---
 
 [MIT](LICENSE)
 
