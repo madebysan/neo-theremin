@@ -1,3 +1,5 @@
+<p><img src="assets/app-icon.png" width="128" height="128" alt="Neo Theremin app icon"></p>
+
 <h1>Neo Theremin</h1>
 
 <p>Play a browser-based synthesizer with your hands.<br>
