@@ -101,7 +101,7 @@ export default function HandCanvas({ handDataRef, soundStateRef, videoWidth, vid
     ctx.font = '10px "Share Tech Mono", monospace'
     ctx.fillStyle = EVA.textDim
     ctx.textAlign = 'left'
-    ctx.fillText('NERV AUDIO INTERFACE v2.6', 20, 30)
+    ctx.fillText('NEO THEREMIN v2.6', 20, 30)
     ctx.fillText(`SYNTH: ${soundStateRef.current.packLabel || 'ETHEREAL'}`, 20, 44)
 
     // === TOP-RIGHT: Status ===

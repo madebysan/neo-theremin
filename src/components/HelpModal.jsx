@@ -93,7 +93,7 @@ export default function HelpModal({ onClose }) {
 
         <div className="mt-5 pt-3" style={{ borderTop: '1px solid rgba(255,106,0,0.1)' }}>
           <p className="text-[9px] tracking-[0.15em] text-center" style={{ color: 'rgba(255,106,0,0.2)' }}>
-            NERV AUDIO DIVISION — GESTURE SYNTHESIS INTERFACE
+            NEO THEREMIN — GESTURE SYNTHESIS INTERFACE
           </p>
           <p className="text-[10px] text-center mt-2">
             <a href="https://santiagoalonso.com" target="_blank" rel="noopener noreferrer"

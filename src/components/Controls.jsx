@@ -10,7 +10,7 @@ export default function Controls({
 
       {/* Top row: scale, toggles, status */}
       <div className="flex items-center gap-4 mb-2.5">
-        <span className="text-xs text-[var(--color-eva-orange)] opacity-70 tracking-widest">MAGI//</span>
+        <span className="text-xs text-[var(--color-eva-orange)] opacity-70 tracking-widest">NEO//</span>
 
         <label className="flex items-center gap-2 text-xs text-[var(--color-eva-orange)] opacity-80">
           SCALE

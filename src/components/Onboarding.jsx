@@ -9,7 +9,7 @@ export default function Onboarding({ step, onStart }) {
           <>
             <div className="mb-6">
               <div className="text-[10px] tracking-[0.3em] mb-2" style={{ color: 'rgba(255,106,0,0.4)' }}>
-                NERV AUDIO DIVISION
+                GESTURE SYNTHESIS INTERFACE
               </div>
               <h1 className="text-4xl font-light tracking-[0.15em] mb-1" style={{ color: '#ff6a00' }}>
                 THEREMIN
@@ -49,7 +49,7 @@ export default function Onboarding({ step, onStart }) {
               LOADING DETECTION MODEL...
             </p>
             <p className="text-[9px] tracking-wider mt-2" style={{ color: 'rgba(255,106,0,0.2)' }}>
-              INITIALIZING MAGI SUBSYSTEM
+              INITIALIZING SYNTH ENGINE
             </p>
           </>
         )}
